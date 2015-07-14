@@ -3,7 +3,7 @@ FactoryGirl.define do
     name Faker::Name.name
 		affiliation Faker::Team.name
 		platform Faker::Company.catch_phrase
-		user_id 1
+		user
   end
 
 end

@@ -1,7 +1,8 @@
 FactoryGirl.define do
-  factory :pledge do
+  factory :contribution do
     candidate
 		user
+		amount 0
   end
 
 end
