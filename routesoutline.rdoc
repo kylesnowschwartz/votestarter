@@ -1,0 +1,41 @@
+
+  user
+    create
+      get #new renders the signup page
+      post #create a new user
+    update
+      get #edit render the form to edit your profile
+      patch #update your own profile
+    destroy
+      get #delete
+      delete #destroy your profile
+
+  candidate
+    create
+      get #new renders the form to nominate a candidate
+      post #create a new candidate
+    read
+      get #show to view a specific candidates page
+      get #index show all candidates
+    update
+      get #edit to render the form to edit a candidate's details
+      patch #update the candidate's page
+    destroy
+      get #delete confirmation form
+      delete #destroy a candidate
+
+    pledge
+      create
+        get #new renders te form to make a pledge for a particular candidate
+        post #create will create the new pledge
+      update
+        get #edit will render the form to edit your pledge
+        patch #update will edit your pledge
+      destroy
+        get #delete confirmation
+        delete #destroy your pledge
+
+
+
+
+
