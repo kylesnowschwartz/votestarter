@@ -3,6 +3,9 @@ class Candidate < ActiveRecord::Base
 	has_many :pledges
 	has_many :users, through: :pledges
 
+	has_many :contributions
+	has_many :users, through: :contributions
+
 	def total_fundraising
 		self.contributions.inject { |total, contribution| total + contribution.amount}
 	end
