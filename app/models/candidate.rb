@@ -4,11 +4,11 @@ class Candidate < ActiveRecord::Base
 	has_many :users, through: :pledges
 
 	def total_fundraising
-		self.pledges.inject { |total, pledge| total + pledge.amount}
+		self.contributions.inject { |total, contribution| total + contribution.amount}
 	end
 
 	def total_votes_pledged
-		self.pledges.collect {|pledge| vote_pledged}.count
+		self.pledges.count
 	end
 
 	def fundraising_goal_hit?

@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :contribution do
     candidate
 		user
-		amount 0
+		amount rand(1..100)
   end
 
 end
