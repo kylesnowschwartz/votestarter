@@ -1,6 +1,6 @@
 class Candidate < ActiveRecord::Base
 	belongs_to :nominator, class_name: "User"
-	
+
 	has_many :pledges
 	has_many :users, through: :pledges
 
@@ -8,7 +8,7 @@ class Candidate < ActiveRecord::Base
 	has_many :users, through: :contributions
 
 	def total_fundraising
-		self.contributions.inject { |total, contribution| total + contribution.amount}
+		self.contributions.sum(:amount)
 	end
 
 	def total_votes_pledged
