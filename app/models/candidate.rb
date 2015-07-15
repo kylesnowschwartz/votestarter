@@ -1,5 +1,6 @@
 class Candidate < ActiveRecord::Base
-	belongs_to :nominator, class_name: "User", foreign_key: "nominator_id"
+	belongs_to :nominator, class_name: "User"
+	
 	has_many :pledges
 	has_many :users, through: :pledges
 

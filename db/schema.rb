@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20150714232652) do
     t.string   "name"
     t.string   "affiliation"
     t.text     "platform"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "pledge_goal"
+    t.integer  "fundraising_goal"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "nominator_id"
   end
 
